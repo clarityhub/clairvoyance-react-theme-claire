@@ -1,0 +1,6 @@
+@import 'main';
+
+.formGroup {
+  @extend %form-group;
+  @extend %form-group--controlled;
+}

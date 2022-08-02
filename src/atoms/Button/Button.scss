@@ -1,0 +1,42 @@
+@import 'main';
+
+.button {
+  @extend %button;
+  border-radius: 5px;
+  padding: $gutter 29px;
+}
+
+.buttonPrimary {
+  @extend %button--primary;
+}
+
+.buttonOutline {
+  @extend %button--primary--outline;
+}
+
+.buttonBlock {
+  @extend %button--block;
+}
+
+.buttonDanger {
+  @extend %button--danger;
+}
+
+.buttonSuccess {
+  @extend %button--success;
+}
+
+.buttonIcon {
+  background-color: transparent;
+  border-color: transparent;
+  min-width: 0;
+}
+
+.buttonSmall {
+  @extend %button--small;
+}
+
+.buttonLoading {
+  cursor: wait;
+  opacity: 0.5;
+}

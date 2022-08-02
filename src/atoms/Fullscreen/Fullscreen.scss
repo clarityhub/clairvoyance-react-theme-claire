@@ -1,0 +1,60 @@
+@import 'main';
+
+.fullScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #F1F1F1;
+  text-align: center;
+
+  // center content
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99999;
+
+  button {
+    background-color: transparent;
+    border: 0 !important;
+    display: inline-block;
+    margin: 10px;
+    padding: 0;
+    text-decoration: none !important;
+
+    svg {
+      @include transition(all $fast ease);
+      opacity: 0.3;
+    }
+
+    &:hover svg {
+      opacity: 0.8;
+    }
+
+  }
+
+  svg {
+    height: 25px;
+    margin: 10px;
+    width: 25px;
+
+    path {
+      fill: #000;
+    }
+  }
+}
+
+.modal {
+  min-width: 520px;
+
+  h1 {
+    font-size: rem(24px);
+  }
+}

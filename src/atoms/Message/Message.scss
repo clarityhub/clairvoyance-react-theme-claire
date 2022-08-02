@@ -1,0 +1,132 @@
+@import 'main';
+
+.message {
+  background-color: $clair-light;
+  box-sizing: content-box;
+  clear: left;
+  color: rgba(0, 0, 0, 1);
+  float: left;
+  font-size: rem(14px);
+  margin: 1px 0 4px;
+  max-width: 70%; // TODO smaller on smaller screens
+  max-width: 85%;
+  outline: none;
+  padding: 12px;
+  position: relative;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  @extend %shadow;
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    max-height: 300px;
+    max-width: 300px;
+  }
+}
+
+.messageOther {
+  // sass-lint:disable property-sort-order
+  border-radius: 0;
+  border-bottom-right-radius: rem(10px);
+  border-top-right-radius: rem(10px);
+  // sass-lint:enable property-sort-order
+
+  &:first-of-type {
+    border-top-left-radius: rem(10px);
+  }
+}
+
+.messageSelf {
+  // sass-lint:disable property-sort-order
+  border-radius: 0;
+  border-bottom-left-radius: rem(10px);
+  border-top-left-radius: rem(10px);
+  // sass-lint:enable property-sort-order
+  clear: right;
+  float: right;
+
+  &:first-of-type {
+    border-top-right-radius: rem(10px);
+  }
+}
+
+.messageTyping {
+  background-color: transparent;
+  color: $clair-coal;
+  border: 1px solid $clair-light;
+}
+
+.messageSystem {
+  background-color: transparent;
+  box-shadow: none;
+  color: $clair-smoke;
+  border-radius: rem(10px);
+  clear: both;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  border: 0;
+  float: none;
+  padding-top: 0;
+}
+
+.messageWidgetTyping {
+  @extend %clair-text;
+  @extend %shadow;
+  background-color: $clair-wash;
+  // sass-lint:disable property-sort-order
+  border-radius: rem(10px);
+  border-top-left-radius: 0;
+  // sass-lint:enable property-sort-order
+  color: $clair-primary;
+  float: left;
+  font-size: rem(14px);
+  margin: 1px 0 5px;
+  outline: none;
+  padding: 6px 12px;
+  position: relative;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  p {
+    margin: 0;
+  }
+  
+  > span {
+    display: inline-block;
+    font-family: 'Roboto';
+    padding:  0 10px;
+    
+    span {
+      font-size: 34px;
+      animation-name: blink;
+      animation-duration: 1.4s;
+      animation-iteration-count: infinite;
+      animation-fill-mode: both;
+    }
+
+    span:nth-child(2) {
+      animation-delay: .2s;
+    }
+
+    span:nth-child(3) {
+      animation-delay: .4s;
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: .2;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}

@@ -1,0 +1,17 @@
+@import 'main';
+
+.error {
+  @extend %p;
+
+  background-color: transparentize($clair-success, 0.9);
+  border: 1px solid $clair-success;
+  border-radius: 4px;
+  color: $clair-success;
+  font-size: rem(14px);
+  margin-top: 13px;
+  padding: 8px 13px;
+
+  &:empty {
+    display: none;
+  }
+}

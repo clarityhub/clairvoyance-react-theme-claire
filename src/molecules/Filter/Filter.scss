@@ -1,0 +1,77 @@
+@import 'main';
+
+// .filter {
+//   background-color: transparent;
+//   border: 0;
+//   border-bottom: 3px solid transparent;
+//   cursor: pointer;
+//   display: inline-block;
+//   padding: 10px 20px;
+//
+//   transition: all $fast ease;
+// }
+//
+// .filterActive {
+//   border-bottom: 3px solid $clair-primary;
+// }
+
+.filter {
+  @extend %p;
+
+  background-color: transparent;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  display: table-cell;
+  padding: 10px 20px;
+  position: relative;
+
+  text-align: center;
+  transition: all $fast ease;
+
+  &.active {
+    color: $clair-primary;
+  }
+
+  button {
+    background-color: transparent;
+    height: 1px;
+    left: -1000px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+.filter:last-child::before {
+  background: $clair-primary;
+  bottom: 6px;
+  content: '';
+  height: 1px;
+  left: 0;
+	position: absolute;
+  // -webkit-transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+	width: 100%;
+}
+
+@mixin filterSlider($cols) {
+  .filter:first-child:nth-last-child(#{$cols}),
+  .filter:first-child:nth-last-child(#{$cols}) ~ .filter {
+
+    &.filter:first-child:global(.active) ~ .filter:last-child::before {
+      transform: translate3d(percentage(-(($cols - 1))), 0, 0);
+    }
+
+    @for $i from 0 through $cols - 2 {
+      &.filter:nth-child(#{$cols - $i}):global(.active) ~ .filter:last-child::before {
+      	transform: translate3d(percentage(-$i), 0, 0);
+      }
+    }
+  }
+}
+
+@include filterSlider(2);
+@include filterSlider(3);
+@include filterSlider(4);
+@include filterSlider(6);

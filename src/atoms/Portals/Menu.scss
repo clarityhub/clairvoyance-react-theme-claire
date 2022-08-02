@@ -1,0 +1,24 @@
+.menu {
+  background-clip: padding-box;
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px #CCC;
+  list-style-type: none;
+  margin: 2px 0 0;
+  outline: none;
+  padding: 0;
+  position: relative;
+  text-align: left;
+
+  &:before {
+    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.01);
+    content: '';
+    height: 4px;
+    left: 0;
+    position: absolute;
+    top: -4px;
+    width: 100%;
+  }
+}

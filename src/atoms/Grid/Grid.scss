@@ -1,0 +1,73 @@
+@import 'main';
+
+.header {
+  border-bottom: $clair-gray 1px solid;
+  display: flex;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.item {
+  @extend %shadow;
+  @include transition(background-color $fast ease);
+  align-items: center;
+  background-color: $clair-light;
+  border: 0;
+  border-radius: 4px;
+  display: flex;
+  height: 64px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 12px;
+  text-align: left;
+  width: 100%;
+
+  &:hover {
+    @include transition(background-color $fast ease);
+    background-color: darken($clair-light, 1%);
+
+    button {
+      opacity: 1;
+    }
+  }
+}
+
+.itemButton {  
+  padding: 0;
+  
+  button {
+    @include transition(background-color $fast ease);
+    align-items: center;
+    background-color: $clair-light;
+    border: 0;
+    display: flex;
+    height: 64px;
+    padding-left: 12px;
+    padding-right: 12px;
+    text-align: left;
+    width: 100%;
+    
+    &:hover {
+      @include transition(background-color $fast ease);
+      background-color: darken($clair-light, 1%);
+      
+      opacity: 1;
+    }
+  }
+}
+
+.headerColumn,
+.itemColumn {
+  display: inline-block;
+}
+
+.itemColumnActions {
+  margin-right: 10px;
+
+  button {
+    float: right;
+    font-size: rem(18px);
+    opacity: 0;
+  }
+}

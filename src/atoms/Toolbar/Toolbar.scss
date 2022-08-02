@@ -1,0 +1,7 @@
+.toolbar {
+  margin-bottom: 15px;
+
+  > :not(:first-child) {
+      margin-left: 15px;
+  }
+}

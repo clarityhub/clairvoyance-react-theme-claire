@@ -1,0 +1,18 @@
+@import 'main';
+
+.copy {
+  @extend %p;
+
+  font-size: rem(12px);
+}
+
+.button {
+  @extend %p;
+
+  background: transparent;
+  border: 0;
+}
+
+.completed {
+  color: red;
+}

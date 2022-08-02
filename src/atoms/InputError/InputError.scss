@@ -1,0 +1,15 @@
+@import 'main';
+
+.inputError {
+  @extend %clair-text;
+
+  color: $clair-danger;
+  position: absolute;
+  top: 53px;
+  left: 0;
+  font-size: 13px;
+
+  & ~ input {
+    border-bottom-color: $clair-danger;
+  }
+}

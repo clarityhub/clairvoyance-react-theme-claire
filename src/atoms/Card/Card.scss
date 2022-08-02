@@ -1,0 +1,20 @@
+@import 'main';
+
+.card {
+  @extend %shadow;
+  background: $clair-light;
+  padding: 30px;
+  margin-bottom: 20px;
+
+  > div {
+    overflow: hidden;
+
+    *:first-child {
+      margin-top: 0;
+    }
+    
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

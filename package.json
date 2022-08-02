@@ -1,0 +1,62 @@
+{
+  "name": "theme-claire",
+  "private": true,
+  "version": "1.2.1",
+  "description": "A set of atoms and molecules based off of atomic design principles for the various Clarity Hub React applications.",
+  "main": "index.js",
+  "author": "Clarity Hub, Inc",
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "classnames": "^2.2.5",
+    "debounce": "^1.0.2",
+    "eslint": "^4.5.0",
+    "eslint-config-claire": "git+ssh://gitlab.com:clairvoyance/eslint-config-claire.git",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-preact": "^1.1.6",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "moment": "^2.18.1",
+    "preact-portal": "^1.1.2",
+    "prop-types": "^15.5.10",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-icons": "^2.2.7",
+    "react-markdown": "^2.5.0",
+    "react-modal": "^2.2.4",
+    "react-textarea-autosize": "^5.1.0",
+    "recompose": "^0.25.0",
+    "uuid": "^3.1.0",
+    "xhr": "^2.4.0"
+  },
+  "optionalDependencies": {
+    "classnames": "^2.2.5",
+    "debounce": "^1.0.2",
+    "moment": "^2.18.1",
+    "preact-portal": "^1.1.2",
+    "prop-types": "^15.5.10",
+    "react-markdown": "^2.5.0",
+    "react-modal": "^2.2.4",
+    "react-textarea-autosize": "^5.1.0",
+    "recompose": "^0.25.0",
+    "uuid": "^3.1.0",
+    "xhr": "^2.4.0"
+  },
+  "peerDependencies": {
+    "classnames": "^2.2.5",
+    "debounce": "^1.0.2",
+    "moment": "^2.18.1",
+    "preact-portal": "^1.1.2",
+    "prop-types": "^15.5.10",
+    "react-markdown": "^2.5.0",
+    "react-modal": "^2.2.4",
+    "react-textarea-autosize": "^5.1.0",
+    "recompose": "^0.25.0",
+    "uuid": "^3.1.0",
+    "xhr": "^2.4.0"
+  }
+}

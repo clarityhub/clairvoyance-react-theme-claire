@@ -1,0 +1,39 @@
+.tooltip {
+  font-family: Helvetica Neue,Arial,sand-serif;
+    font-weight: 300;
+    line-height: 1rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
+  display: block;
+  font-size: .75rem;
+  opacity: .9;
+  position: absolute;
+  visibility: visible;
+  z-index: 1070;
+}
+
+.tooltipInner {
+  background-color: #373737;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 0 4px rgba(0,0,0,.17);
+  box-shadow: 0 0 4px rgba(0,0,0,.17);
+  color: #fff;
+  min-height: 34px;
+  padding: 8px 10px;
+  text-align: left;
+  text-decoration: none;
+}
+
+.tooltipArrow {
+  border-color: transparent;
+  border-style: solid;
+  height: 0;
+  position: absolute;
+  width: 0;
+
+  left: 50%;
+  border-top-color: #373737;
+  border-width: 5px 5px 0;
+  bottom: -4px;
+  margin-left: -5px;
+}

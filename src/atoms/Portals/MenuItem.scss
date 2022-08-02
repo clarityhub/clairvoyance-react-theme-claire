@@ -1,0 +1,33 @@
+@import 'main';
+
+.menuItem {
+  background-color: inherit;
+  border: 0;
+  clear: both;
+  color: #666;
+  display: block;
+  font-size: rem(16px);
+  font-weight: normal;
+  padding: 7px 10px;
+  position: relative;
+  text-align: left;
+  white-space: nowrap;
+  width: 100%;
+
+  &:hover,
+  &:active {
+    background-color: #EBFAFF;
+  }
+
+  &:disabled {
+    color: #CCC;
+    cursor: not-allowed;
+    pointer-events: none;
+
+    &:hover {
+      background-color: #FFF;
+      color: #CCC;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import 'main';
+
+.overlay {
+  background-color: transparentize($clair-dark, 0.3);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10000;
+}
+
+.modal {
+  background: rgb(255, 255, 255);
+  // min-height: 400px;
+  height: auto;
+  left: 50%;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: auto;
+  outline: none;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+}
+
+.modalGuts {
+  height: 100%;
+  left: 0;
+  /* let it scroll */
+  overflow: auto;
+  /* spacing as needed */
+  padding: 20px 50px 20px 20px;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+.modalPrompt {
+  height: auto;
+  width: 400px;
+
+  .modalGuts {
+    left: initial;
+    position: initial;
+    top: initial;
+  }
+}
